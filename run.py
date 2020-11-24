@@ -16,8 +16,10 @@ def main(targets):
             
             # make the data target
             file_names, file_labels, new_df = features_labels(**feature_cfg)
-            print("The associated file names are: " + file_names)
-            print("The associated file labels are: " + file_labels)
+            print("The associated file names are: ") 
+            print(file_names)
+            print("The associated file labels are: ") 
+            print(file_labels)
             print("Created the new features!")
     return new_df
 
