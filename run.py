@@ -6,20 +6,19 @@ from features import features_labels
 
 def main(targets):
     '''
-    Runs the main project pipeline logic, given the targets.
-    main runs the targets in order of data=>analysis=>model
+    Given the targets, main runs the main project pipeline logic.
     '''
     
     if 'test' in targets:
-        with open('config/test-params.json') as fh:
-            feature_cfg = json.load(fh)
+        with open('config/test-params.json') as test_params:
+            feature_cfg = json.load(test_params)
             
             
             # make the data target
             file_names, file_labels, new_df = features_labels(**feature_cfg)
-            print("Created the new features!")
             print(The associated file names are: " + file_names)
             print(The associated file labels are: " + file_labels)
+            print("Created the new features!")
     return new_df
 
 if __name__=='__main__':
