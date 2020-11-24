@@ -17,10 +17,7 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 USER root
 
 RUN	apt-get update && apt-get install -y \
-    htop \
-    aria2 \
-    nmap \
-    traceroute
+    htop
 # 3) install packages
 RUN pip install --no-cache-dir scipy
 
@@ -30,4 +27,4 @@ RUN chmod 755 /run_jupyter.sh
 USER $NB_UID
 
 # Override command to disable running jupyter notebook at launch
-# CMD ["/bin/bash"]
+CMD ["/bin/bash"]
