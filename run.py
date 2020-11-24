@@ -21,6 +21,7 @@ def main(targets):
             print("The associated file labels are: ") 
             print(file_labels)
             print("Created the new features!")
+            print(new_df)
     return new_df
 
 if __name__=='__main__':
