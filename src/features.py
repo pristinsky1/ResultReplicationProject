@@ -3,9 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-
-
-
 def three_cols(row):
     time = list(map(int, row['packet_times'].split(';')[0:-1]))
     size = list(map(int, row['packet_sizes'].split(';')[0:-1]))
@@ -39,11 +36,12 @@ def big_byte_count_feature(dataset):
   # input: filepaths
 # output: 4 lists -> associated file names, labels, feature1, feature2
 # uses the big_byte_count_feature as a helper function
-def features_labels(files):
+def features_labels(filepath):
     Dir1_ByteCount_0to300_feature = []
     Dir2_ByteCount_1200to1500_feature = []
     labels = []
     file_names = []
+    files = os.listdir(filepath)
     for file in files:
         if ('novpn' in file) or (file[:2] == '._'):
             continue
@@ -52,7 +50,7 @@ def features_labels(files):
         else:
             labels.append(1)
         file_names.append(file)
-        df = pd.read_csv('/teams/DSC180A_FA20_A00/b05vpnxray/data/unzipped/' + file)
+        df = pd.read_csv(filepath + '/' + file)
         sum_values = big_byte_count_feature(df)
         Dir1_ByteCount_0to300_feature.append(sum_values[0])
         Dir2_ByteCount_1200to1500_feature.append(sum_values[1])
