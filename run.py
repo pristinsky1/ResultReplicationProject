@@ -18,11 +18,11 @@ def main(targets):
             # make the data target
             file_names, file_labels, new_df = features_labels(**feature_cfg)
             new_df.to_csv("test/output/test_output.csv")
-            print("The associated file names are: ") 
+            print("The associated test file names are: ") 
             print(file_names)
-            print("The associated file labels are: ") 
+            print("The associated test file labels are: ") 
             print(file_labels)
-            print("Created the new features! Check folder test/output/ and observe the output features csv file!")
+            print("Created the new test features! Check folder test/output/ and observe the output features csv file!")
     return
 
 if __name__=='__main__':
