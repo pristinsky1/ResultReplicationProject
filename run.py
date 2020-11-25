@@ -23,7 +23,6 @@ def main(targets):
             print("The associated file labels are: ") 
             print(file_labels)
             print("Created the new features! Check folder test/output/ and observe the output features csv file!")
-            print(new_df)
     return
 
 if __name__=='__main__':
