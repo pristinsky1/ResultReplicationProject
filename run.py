@@ -22,7 +22,7 @@ def main(targets):
             print(file_names)
             print("The associated file labels are: ") 
             print(file_labels)
-            print("Created the new features!")
+            print("Created the new features! Check folder test/output/ and observe the output features csv file!")
             print(new_df)
     return
 
