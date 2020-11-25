@@ -6,7 +6,7 @@ Running the run.py on test data will provide an example of how the chunks of dat
 
 (Make sure to ssh into DSMLP server first)
 
-launch-180.sh -i apristin99/methodology_7
+launch-180.sh -i apristin99/result_replication_project
 
 git clone https://github.com/pristinsky1/ResultReplicationProject.git
 
